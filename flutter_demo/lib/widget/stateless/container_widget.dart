@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_demo/common/style.dart';
 
 class ContainerWidget extends StatelessWidget {
   const ContainerWidget({Key? key}) : super(key: key);
@@ -7,32 +8,24 @@ class ContainerWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Container组件'),
+        title: const Text("Container组件"),
       ),
       body: Container(
-        padding: const EdgeInsets.all(
-          10.0,
-        ),
+        padding: const EdgeInsets.all(10.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const Text(
-              '容器组件',
-              style: TextStyle(
-                fontSize: 22,
-                color: Colors.purpleAccent,
-              ),
+              "容器组件",
+              style: titleStyle,
             ),
             Container(
-              margin: const EdgeInsets.symmetric(
-                vertical: 5.0,
-              ),
+              // symmetric({ vertical, horizontal })：用于设置对称方向的填充，vertical指top和bottom，horizontal指left和right
+              margin: const EdgeInsets.symmetric(vertical: 5.0),
               child: const Text(
-                  '用于容纳单个子组件的容器组件。集成了若干个单子组件的功能，'
-                      '如内外边距、形变、装饰、约束等。',
-                  style: TextStyle(
-                    fontSize: 18,
-                  )),
+                "用于容纳单个子组件的容器组件，集成了若干个单子组件的功能,如内外边距、形变、装饰、约束等",
+                style: descStyle,
+              ),
             ),
             Container(
               margin: const EdgeInsets.all(20.0),
@@ -47,7 +40,7 @@ class ContainerWidget extends StatelessWidget {
                 borderRadius: const BorderRadius.all(Radius.circular(20.0)),
                 image: const DecorationImage(
                   image: NetworkImage(
-                      'https://patrick-file.oss-cn-shanghai.aliyuncs.com/img/%E8%8E%AB%E6%96%AF%E5%A1%94%E5%B0%94%E5%8F%A4%E6%A1%A5.jpg'),
+                      'https://patrick-file.oss-cn-shanghai.aliyuncs.com/img/wolf2.jpg'),
                   fit: BoxFit.fill,
                 ),
               ),
@@ -61,28 +54,25 @@ class ContainerWidget extends StatelessWidget {
                     ?.copyWith(color: Colors.indigo),
               ),
             ),
-            const SizedBox(
-              height: 20,
-            ),
+            const SizedBox(height: 20),
             Container(
               width: 200,
               height: 200,
               decoration: const BoxDecoration(
-                shape: BoxShape.circle, //Container为圆形
-                color: Colors.orange,
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.grey,
-                    offset: Offset(
-                      0.0,
-                      3.0, //阴影y轴偏移量
-                    ),
-                    blurRadius: 10, //阴影模糊程度
-                    spreadRadius: 2, //阴影扩散程度
-                  ),
-                ],
-              ),
-            ),
+                  shape: BoxShape.circle,
+                  color: Colors.orange,
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey,
+                      //阴影y轴偏移量
+                      offset: Offset(0.0, 3.0),
+                      //阴影模糊程度
+                      blurRadius: 10,
+                      //阴影扩散程度
+                      spreadRadius: 2,
+                    )
+                  ]),
+            )
           ],
         ),
       ),

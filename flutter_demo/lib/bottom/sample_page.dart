@@ -24,7 +24,7 @@ class _SamplePageState extends State<SamplePage> {
       decoration: const BoxDecoration(
         image: DecorationImage(
           image: NetworkImage(
-            'https://niit-soft.oss-cn-hangzhou.aliyuncs.com/banner/bg.jpg',
+            'https://patrick-file.oss-cn-shanghai.aliyuncs.com/img/bg.jpg',
           ),
           fit: BoxFit.cover,
         ),

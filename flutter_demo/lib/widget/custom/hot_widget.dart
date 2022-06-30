@@ -1,23 +1,23 @@
+//封装常用组件卡片
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
-//封装首页常用组件卡片
+//封装常用组件卡片
 class HotWidget extends StatelessWidget {
   final Info info;
 
-  const HotWidget({
-    Key? key,
-    required this.info,
-  }) : super(key: key);
+  const HotWidget({Key? key, required this.info}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     var style = const TextStyle(
-      color: Colors.white,
-      fontSize: 20,
-      fontWeight: FontWeight.bold,
-      fontStyle: FontStyle.italic,
-      letterSpacing: 2,
-    );
+        color: Colors.white,
+        fontSize: 20,
+        fontWeight: FontWeight.bold,
+        fontStyle: FontStyle.italic,
+        letterSpacing: 2);
+
     return InkWell(
       onTap: () => {Navigator.pushNamed(context, info.url)},
       child: Container(

@@ -5,7 +5,7 @@ class ImageWidget extends StatelessWidget {
   final assetsImagePath = 'images/puff.png';
   final assetsGifPath = 'images/gif.gif';
   final netImageUrl =
-      'https://patrick-file.oss-cn-shanghai.aliyuncs.com/img/wolf2.jpg';
+      'https://patrick-file.oss-cn-shanghai.aliyuncs.com/img/%E8%8E%AB%E6%96%AF%E5%A1%94%E5%B0%94%E5%8F%A4%E6%A1%A5.jpg';
 
   @override
   Widget build(BuildContext context) {
@@ -86,22 +86,22 @@ class ImageWidget extends StatelessWidget {
                     .toList()
                     .map(
                       (mode) => Column(
-                    children: <Widget>[
-                      Container(
-                        margin: const EdgeInsets.all(5),
-                        width: 60,
-                        height: 60,
-                        color: Colors.red,
-                        child: Image(
-                          image: AssetImage(assetsImagePath),
-                          color: Colors.blue.withAlpha(88),
-                          colorBlendMode: mode,
-                        ),
+                        children: <Widget>[
+                          Container(
+                            margin: const EdgeInsets.all(5),
+                            width: 60,
+                            height: 60,
+                            color: Colors.red,
+                            child: Image(
+                              image: AssetImage(assetsImagePath),
+                              color: Colors.blue.withAlpha(88),
+                              colorBlendMode: mode,
+                            ),
+                          ),
+                          Text(mode.toString().split('.')[1]),
+                        ],
                       ),
-                      Text(mode.toString().split('.')[1]),
-                    ],
-                  ),
-                )
+                    )
                     .toList(),
               ),
               Container(
@@ -164,24 +164,20 @@ class ImageWidget extends StatelessWidget {
   }
 
   Widget _loadFromAssets() => Wrap(
-    spacing: 10,
-    children: <Widget>[
-      Image.asset(
-        assetsImagePath,
-        height: 80,
-        // width: 80,
-      ),
-      Image.asset(
-        assetsGifPath,
-        height: 80,
-        fit: BoxFit.fitWidth,
-      )
-    ],
-  );
+        spacing: 10,
+        children: [
+          Image.asset(assetsImagePath, height: 80),
+          Image.asset(
+            assetsGifPath,
+            height: 80,
+            fit: BoxFit.fitWidth,
+          )
+        ],
+      );
 
   Widget _loadFromNet() => Image.network(
-    netImageUrl,
-    height: 80,
-    fit: BoxFit.fitWidth,
-  );
+        netImageUrl,
+        height: 80,
+        fit: BoxFit.fitWidth,
+      );
 }

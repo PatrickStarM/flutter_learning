@@ -22,7 +22,7 @@ class ContainerWidget extends StatelessWidget {
           borderRadius: const BorderRadius.all(Radius.circular(20.0)),
           image: const DecorationImage(
             image: NetworkImage(
-                'https://patrick-file.oss-cn-shanghai.aliyuncs.com/img/wolf2.jpg'),
+                'https://patrick-file.oss-cn-shanghai.aliyuncs.com/img/%E8%8E%AB%E6%96%AF%E5%A1%94%E5%B0%94%E5%8F%A4%E6%A1%A5.jpg'),
             fit: BoxFit.fill,
           ),
         ),

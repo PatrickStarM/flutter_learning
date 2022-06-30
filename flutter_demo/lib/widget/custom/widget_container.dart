@@ -1,7 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-// 封装分类页面中列表中的每个Container组件
-// ignore: must_be_immutable
 class WidgetContainer extends StatelessWidget {
   ContainerInfo info;
 
@@ -11,40 +10,33 @@ class WidgetContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.all(5.0),
-      // 装饰整个Container
+      //  装饰整个Container
       decoration: BoxDecoration(
         border: Border.all(width: 1.0, color: Colors.indigo),
         color: Colors.white,
         borderRadius: const BorderRadius.all(Radius.circular(10.0)),
       ),
       child: ListTile(
-        // 左侧leading图标区，用一个Container来绘制一个圆形，文字为标题的第一个字母
+        //  左侧leading图标区用一个container绘制一个圆形 ，文字为标题的第一个字母
         leading: Container(
           alignment: Alignment.center,
           width: 60,
           height: 60,
-          //装饰形状、背景色、阴影等
           decoration: const BoxDecoration(
-            shape: BoxShape.circle, //Container为圆形
-            color: Colors.orange,
-            boxShadow: [
-              BoxShadow(
-                color: Colors.grey,
-                offset: Offset(
-                  0.0,
-                  3.0, //阴影y轴偏移量
-                ),
-                blurRadius: 10, //阴影模糊程度
-                spreadRadius: 2, //阴影扩散程度
-              ),
-            ],
-          ),
+              shape: BoxShape.circle,
+              color: Colors.orange,
+              boxShadow: [
+                BoxShadow(
+                    color: Colors.grey,
+                    offset: Offset(0.0, 3.0),
+                    //阴影模糊程度都
+                    blurRadius: 10,
+                    //阴影扩散程度
+                    spreadRadius: 2)
+              ]),
           child: Text(
             info.title.substring(0, 1),
-            style: const TextStyle(
-              fontSize: 20,
-              color: Colors.indigo,
-            ),
+            style: const TextStyle(fontSize: 20, color: Colors.indigo),
           ),
         ),
         title: Text(

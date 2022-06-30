@@ -1,6 +1,5 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
-const greenColor = Color(0xFF0C9869);
 
 class SilverAppBarWidget extends StatelessWidget {
   const SilverAppBarWidget({Key? key}) : super(key: key);
@@ -17,7 +16,7 @@ class SilverAppBarWidget extends StatelessWidget {
               elevation: 1,
               expandedHeight: 200.0,
               flexibleSpace: FlexibleSpaceBar(
-                title: const Text('SliverAppBar'),
+                title: const Text("SliverAppBar"),
                 background: Image.network(
                   'https://patrick-file.oss-cn-shanghai.aliyuncs.com/img/bg.jpg',
                   fit: BoxFit.cover,
@@ -25,8 +24,7 @@ class SilverAppBarWidget extends StatelessWidget {
               ),
             ),
             SliverFixedExtentList(
-              itemExtent: 80.0,
-              delegate: SliverChildBuilderDelegate(
+                delegate: SliverChildBuilderDelegate(
                     (BuildContext context, int index) {
                   return Card(
                     child: Container(
@@ -35,17 +33,17 @@ class SilverAppBarWidget extends StatelessWidget {
                       child: const Text('demo'),
                     ),
                   );
-                },
-              ),
-            ),
+                }),
+                itemExtent: 80.0),
+            //充满剩下的区域
             SliverFillRemaining(
               child: Center(
                 child: Padding(
                   padding: const EdgeInsets.all(15),
-                  child: Image.asset("images/bg.png"),
+                  child: Image.asset("images/莫斯塔尔古桥.png"),
                 ),
               ),
-            ),
+            )
           ],
         ),
       ),
