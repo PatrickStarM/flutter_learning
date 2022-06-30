@@ -1,5 +1,7 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_demo/widget/hot_widget.dart';
+
+import '../widget/custom/hot_widget.dart';
 
 class SamplePage extends StatefulWidget {
   const SamplePage({Key? key}) : super(key: key);
@@ -15,20 +17,21 @@ class _SamplePageState extends State<SamplePage> {
     final size = MediaQuery.of(context).size;
     final width = size.width;
     final height = size.height;
-    // 用Container包裹Scaffold，设置背景图充满
+    //用Container 设置背景图充满
     return Container(
       width: width,
       height: height,
       decoration: const BoxDecoration(
         image: DecorationImage(
           image: NetworkImage(
-              'https://patrick-file.oss-cn-shanghai.aliyuncs.com/img/bg.jpg'),
+            'https://niit-soft.oss-cn-hangzhou.aliyuncs.com/banner/bg.jpg',
+          ),
           fit: BoxFit.cover,
         ),
       ),
       child: Scaffold(
         backgroundColor: Colors.transparent,
-        // AppBar设置背景色透明，取消阴影
+        //  AppBar 设置背景色，取消阴影
         appBar: AppBar(
           elevation: 0,
           backgroundColor: Colors.transparent,
@@ -100,27 +103,10 @@ class _SamplePageState extends State<SamplePage> {
           children: list
               .map(
                 (e) => HotWidget(info: e),
-          )
+              )
               .toList(),
         ),
       ),
-      // child: Row(
-      //   mainAxisAlignment: MainAxisAlignment.spaceAround,
-      //   crossAxisAlignment: CrossAxisAlignment.start,
-      //
-      // ),
     );
   }
-
-// return Container(
-//   width: size.width,
-//   height: size.height,
-//   margin: const EdgeInsets.all(12),
-//   padding: const EdgeInsets.all(12),
-//   decoration: const BoxDecoration(
-//     borderRadius: BorderRadius.all(Radius.circular(20.0)),
-//     color: Colors.white38,
-//   ),
-// );
-// }
 }

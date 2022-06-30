@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_demo/widget/hot_widget.dart';
+
+import '../widget/custom/hot_widget.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -14,7 +15,9 @@ class HomePage extends StatelessWidget {
 
   AppBar _buildAppBar(context) {
     return AppBar(
+      //导航栏阴影
       elevation: 0,
+      //背景色
       backgroundColor: Colors.white,
       title: const Text(
         "首页",
@@ -24,33 +27,33 @@ class HomePage extends StatelessWidget {
           fontWeight: FontWeight.bold,
         ),
       ),
+      //是否居中
       centerTitle: false,
     );
   }
 }
 
-//页面body类
+//body类
 class Body extends StatelessWidget {
   const Body({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    // 返回一个垂直滚动视图
+    //垂直滚动视图
     return SingleChildScrollView(
       padding: const EdgeInsets.all(5.0),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[
+        children: [
           Image.asset('images/banner.jpg'),
+          //边距
           const SizedBox(
             height: 10,
           ),
           _buildCardRow(context),
           const Text(
             '常用组件',
-            style: TextStyle(
-              fontSize: 20,
-            ),
+            style: TextStyle(fontSize: 20),
           ),
           _buildScrollView(context),
         ],
@@ -58,18 +61,20 @@ class Body extends StatelessWidget {
     );
   }
 
-  //  构建水平卡片区域
+//  水平卡片区域
   Row _buildCardRow(context) {
+    //获取设备信息
     Size size = MediaQuery.of(context).size;
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: const <Widget>[
         SizedBox(
-          width: 160,
-          height: 120,
+          width: 200,
+          height: 150,
           child: Card(
             color: Color(0xffe05b48),
-            elevation: 10,
+            //阴影
+            elevation: 20,
             child: Center(
               child: Text(
                 'Dart基础学习',
@@ -81,31 +86,14 @@ class Body extends StatelessWidget {
               ),
             ),
           ),
-        ),
-        SizedBox(
-          width: 160,
-          height: 120,
-          child: Card(
-            color: Color(0xFF5f6cd1),
-            elevation: 10,
-            child: Center(
-              child: Text(
-                'Flutter Widget',
-                style: TextStyle(
-                  fontSize: 20,
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ),
-          ),
-        ),
+        )
       ],
     );
   }
 
-  // 构建水平滚动视图
+//  构建水平滚动视图
   SingleChildScrollView _buildScrollView(context) {
+    //滚动元素数组
     var list = [
       Info(
         width: 200.0,
@@ -129,14 +117,16 @@ class Body extends StatelessWidget {
         url: '/text',
       )
     ];
-
+    //SingleChildScrollView类似于Android中的ScrollView
     return SingleChildScrollView(
+      //滚动方向
       scrollDirection: Axis.horizontal,
+      //渲染list
       child: Row(
         children: list
             .map(
               (e) => HotWidget(info: e),
-        )
+            )
             .toList(),
       ),
     );

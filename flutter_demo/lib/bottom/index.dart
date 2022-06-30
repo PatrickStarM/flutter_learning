@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_demo/bottom/category_page.dart';
-import 'package:flutter_demo/bottom/home_page.dart';
 import 'package:flutter_demo/bottom/sample_page.dart';
+
+import 'category_page.dart';
+import 'home_page.dart';
 
 class Index extends StatefulWidget {
   const Index({Key? key}) : super(key: key);
@@ -12,7 +13,6 @@ class Index extends StatefulWidget {
 
 class _IndexState extends State<Index> {
   var _currentIndex = 0;
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
