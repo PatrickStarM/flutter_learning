@@ -71,6 +71,10 @@ flutter:
    - images/puff.png
    - images/普罗旺斯薰衣草田.jpg
    - images/莫斯塔尔古桥.jpg
+   - images/dart.webp
+   - images/flutter.webp
+   - images/java.webp
+   - images/kotlin.webp
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

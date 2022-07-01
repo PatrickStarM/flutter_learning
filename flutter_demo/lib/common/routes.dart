@@ -23,6 +23,14 @@ import 'package:flutter_demo/widget/stateless/text_widget.dart';
 import 'package:flutter_demo/widget/stateless/theme_widget.dart';
 import 'package:flutter_demo/widget/stateless/useraccountdrawerheader_widget.dart';
 import 'package:flutter_demo/widget/stateless/visiblity_widget.dart';
+import 'package:flutter_demo/widget/stateless/aboutlisttile_widget.dart';
+import 'package:flutter_demo/widget/stateless/alertdialog_widget.dart';
+import 'package:flutter_demo/widget/stateless/checkoutlisttile_widget.dart';
+import 'package:flutter_demo/widget/stateless/gridtile_widget.dart';
+import 'package:flutter_demo/widget/stateless/listtile_widget.dart';
+import 'package:flutter_demo/widget/stateless/radiolisttile_widget.dart';
+import 'package:flutter_demo/widget/stateless/space_widget.dart';
+import 'package:flutter_demo/widget/stateless/switchlisttile_widget.dart';
 
 Map<String, Widget Function(BuildContext)> routes = {
   '/index': (context) => const Index(),
@@ -42,11 +50,18 @@ Map<String, Widget Function(BuildContext)> routes = {
   '/actionchip': (context) => const ActionChipWidget(),
   '/theme': (context) => const ThemeWidget(),
   '/gesturedetector': (context) => const GestureDetectorWidget(),
-  '/useraccountdrawerheader': (context) =>
-  const UserAccountDrawerHeaderWidget(),
+  '/useraccountdrawerheader': (context) => const UserAccountDrawerHeaderWidget(),
   '/button': (context) => const ButtonWidget(),
   '/card': (context) => const CardWidget(),
   '/visiblity': (context) => const VisiblityWidget(),
+  '/aboutlisttile': (context) => const AboutListTileWidget(),
+  '/alertdialog': (context) => const AlertDialogWidget(),
+  '/checkboxlisttile': (context) => const CheckboxListTileWidget(),
+  '/gridtile': (context) => const GridTileWidget(),
+  '/listtile': (context) => const ListTileWidget(),
+  '/radiolisttile': (context) => const RadioListTileWidget(),
+  '/space': (context) => const SpaceWidget(),
+  '/switchlisttile': (context) => const SwitchListTileWidget(),
   // 有状态组件导航
   '/image': (context) => const ImageWidget(),
   '/sliverappbar': (context) => const SilverAppBarWidget(),
