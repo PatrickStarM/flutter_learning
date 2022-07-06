@@ -31,6 +31,14 @@ import 'package:flutter_demo/widget/stateless/listtile_widget.dart';
 import 'package:flutter_demo/widget/stateless/radiolisttile_widget.dart';
 import 'package:flutter_demo/widget/stateless/space_widget.dart';
 import 'package:flutter_demo/widget/stateless/switchlisttile_widget.dart';
+import 'package:flutter_demo/widget/stateless/aboutdialog_widget.dart';
+import 'package:flutter_demo/widget/stateless/day_picker_widget.dart';
+import 'package:flutter_demo/widget/stateless/dialog_widget.dart';
+import 'package:flutter_demo/widget/stateless/materialBanner_widget.dart';
+import 'package:flutter_demo/widget/stateless/navigationToolbar_widget.dart';
+import 'package:flutter_demo/widget/stateless/placeholder_widget.dart';
+import 'package:flutter_demo/widget/stateless/safe_area_widget.dart';
+import 'package:flutter_demo/widget/stateless/simpledialog_widget.dart';
 
 Map<String, Widget Function(BuildContext)> routes = {
   '/index': (context) => const Index(),
@@ -62,6 +70,14 @@ Map<String, Widget Function(BuildContext)> routes = {
   '/radiolisttile': (context) => const RadioListTileWidget(),
   '/space': (context) => const SpaceWidget(),
   '/switchlisttile': (context) => const SwitchListTileWidget(),
+  "/aboutdialog": (context) => const AboutDialogWidget(),
+  "/dialog": (context) => const DialogWidget(),
+  "/simpledialog": (context) => const SimpleDialogWidget(),
+  "/picker": (context) => const DayPickerWidget(),
+  "/safearea": (context) => const SafeAreaWidget(),
+  "/materialbanner": (context) => const MaterialBannerWidget(),
+  "/navigationtoolbar": (context) => const NavigationToolbarWidget(),
+  "/placeholder": (context) => const PlaceholderWidget(),
   // 有状态组件导航
   '/image': (context) => const ImageWidget(),
   '/sliverappbar': (context) => const SilverAppBarWidget(),
