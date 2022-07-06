@@ -77,6 +77,11 @@ flutter:
    - images/flutter.webp
    - images/java.webp
    - images/kotlin.webp
+
+  fonts:
+   - family: iconfont
+     fonts:
+      - asset: images/iconfont.ttf
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

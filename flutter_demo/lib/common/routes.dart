@@ -39,6 +39,10 @@ import 'package:flutter_demo/widget/stateless/navigationToolbar_widget.dart';
 import 'package:flutter_demo/widget/stateless/placeholder_widget.dart';
 import 'package:flutter_demo/widget/stateless/safe_area_widget.dart';
 import 'package:flutter_demo/widget/stateless/simpledialog_widget.dart';
+import 'package:flutter_demo/widget/stateless/cupertino_widget.dart';
+import 'package:flutter_demo/widget/stateless/divider_widget.dart';
+import 'package:flutter_demo/widget/stateless/icon_widget.dart';
+import 'package:flutter_demo/widget/stateless/mypreferredsize_widget.dart';
 
 Map<String, Widget Function(BuildContext)> routes = {
   '/index': (context) => const Index(),
@@ -78,6 +82,10 @@ Map<String, Widget Function(BuildContext)> routes = {
   "/materialbanner": (context) => const MaterialBannerWidget(),
   "/navigationtoolbar": (context) => const NavigationToolbarWidget(),
   "/placeholder": (context) => const PlaceholderWidget(),
+  "/cupertino": (context) => const CupertinoWidget(),
+  "/icon": (context) => const IconWidget(),
+  "/divider": (context) => const DividerWidget(),
+  "/mypreferredsize": (context) => const MyPreferredSizeWidget(),
   // 有状态组件导航
   '/image': (context) => const ImageWidget(),
   '/sliverappbar': (context) => const SilverAppBarWidget(),
