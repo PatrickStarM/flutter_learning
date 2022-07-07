@@ -93,4 +93,14 @@ final statefulList = <ContainerInfo>[
       'Image', '用于显示一张图片，可以从文件、内存、网络、资源里加载，可以指定适应方式、样式、颜色混合模式、重复模式。', '/image'),
   ContainerInfo(
       'SliverAppBar', 'SliverAppBar组件可以实现页面头部区域展开、折叠的效果。', '/sliverappbar'),
+  ContainerInfo(
+      'AnimatedBuilder', '通过 builder 使动⾯对应的节点变为局部更新，且可避免⼦组件刷新，减少构建的时问，提⾼动画性能。', '/animatedbuilder'),
+  ContainerInfo(
+      'AnimatedContainer', '集alignment、padding、color、decoration、width、height、constraints、margin、transform于⼀身，这些属性皆可动画，可指定动画的时⻓和曲线，有动画结束事件。', '/animatedcontainer'),
+  ContainerInfo(
+      'AnimatedEffect', '各种动画效果', '/animatedeffect'),
+  ContainerInfo(
+      'AnimatedList', '强化版的ListView,可以对item进⾏动画处理，⽐如在添加、删除item时的动画。', '/animatedlist'),
+  ContainerInfo(
+      'AnimatedSwitcher', '子组件变化动画', '/animatedswitche'),
 ];

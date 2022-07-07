@@ -43,6 +43,11 @@ import 'package:flutter_demo/widget/stateless/cupertino_widget.dart';
 import 'package:flutter_demo/widget/stateless/divider_widget.dart';
 import 'package:flutter_demo/widget/stateless/icon_widget.dart';
 import 'package:flutter_demo/widget/stateless/mypreferredsize_widget.dart';
+import 'package:flutter_demo/widget/stateful/animatedbuilder_widget.dart';
+import 'package:flutter_demo/widget/stateful/animatedcontainer_widget.dart';
+import 'package:flutter_demo/widget/stateful/animatedeffect_widget.dart';
+import 'package:flutter_demo/widget/stateful/animatedlist_widget.dart';
+import 'package:flutter_demo/widget/stateful/animatedswitche_widget.dart';
 
 Map<String, Widget Function(BuildContext)> routes = {
   '/index': (context) => const Index(),
@@ -89,6 +94,11 @@ Map<String, Widget Function(BuildContext)> routes = {
   // 有状态组件导航
   '/image': (context) => const ImageWidget(),
   '/sliverappbar': (context) => const SilverAppBarWidget(),
+  '/animatedbuilder': (context) => const AnimatedBuilderWidget(),
+  '/animatedcontainer': (context) => const AnimatedContainerWidget(),
+  '/animatedeffect': (context) => const AnimatedEffectWidget(),
+  '/animatedlist': (context) => const AnimatedListWidget(),
+  '/animatedswitche': (context) => const AnimatedSwitcherWidget(),
   // 示例导航
   '/plant-shop': (context) => const PlantShop(),
   '/timeline': (context) => const TimelinePage(),
