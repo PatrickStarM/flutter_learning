@@ -103,4 +103,14 @@ final statefulList = <ContainerInfo>[
       'AnimatedList', '强化版的ListView,可以对item进⾏动画处理，⽐如在添加、删除item时的动画。', '/animatedlist'),
   ContainerInfo(
       'AnimatedSwitcher', '子组件变化动画', '/animatedswitche'),
+  ContainerInfo(
+      'FutureBuilder', '异步构造器', '/futurebuilder'),
+  ContainerInfo(
+      'Hero', '共享动画', '/hero'),
+  ContainerInfo(
+      'Material', '材质组件', '/material'),
+  ContainerInfo(
+      'MaterialApp', 'Material应用', '/materialapp'),
+  ContainerInfo(
+      'WillPopScope', '返回拦截', '/willpopscope'),
 ];
