@@ -53,6 +53,13 @@ import 'package:flutter_demo/widget/stateful/hero_widget.dart';
 import 'package:flutter_demo/widget/stateful/material_widget.dart';
 import 'package:flutter_demo/widget/stateful/materialapp_widget.dart';
 import 'package:flutter_demo/widget/stateful/willpopscope_widget.dart';
+import 'package:flutter_demo/widget/stateful/overlay_widget.dart';
+import 'package:flutter_demo/widget/stateful/stepper_widget.dart';
+import 'package:flutter_demo/widget/stateful/checkboxradio_widget.dart';
+import 'package:flutter_demo/widget/stateful/rangeslider_widget.dart';
+import 'package:flutter_demo/widget/stateful/refreshindicator_widget.dart';
+import 'package:flutter_demo/widget/stateful/snackbar_widget.dart';
+import 'package:flutter_demo/widget/stateful/slide_widget.dart';
 
 Map<String, Widget Function(BuildContext)> routes = {
   '/index': (context) => const Index(),
@@ -72,7 +79,8 @@ Map<String, Widget Function(BuildContext)> routes = {
   '/actionchip': (context) => const ActionChipWidget(),
   '/theme': (context) => const ThemeWidget(),
   '/gesturedetector': (context) => const GestureDetectorWidget(),
-  '/useraccountdrawerheader': (context) => const UserAccountDrawerHeaderWidget(),
+  '/useraccountdrawerheader': (context) =>
+      const UserAccountDrawerHeaderWidget(),
   '/button': (context) => const ButtonWidget(),
   '/card': (context) => const CardWidget(),
   '/visiblity': (context) => const VisiblityWidget(),
@@ -109,6 +117,14 @@ Map<String, Widget Function(BuildContext)> routes = {
   '/material': (context) => const MaterialWidget(),
   '/materialapp': (context) => const MaterialAppWidget(),
   '/willpopscope': (context) => const WillPopScopeWidget(),
+  '/overlay': (context) => const OverlayWidget(),
+  '/stepper': (context) => const StepperWidget(),
+  '/checkboxradio': (context) => const CheckboxRadioWidget(),
+  '/slider': (context) => const SliderWidget(),
+  '/rangeslider': (context) => const RangeSliderWidget(),
+  '/snackbar': (context) => const SnackBarWidget(),
+  '/refreshindicator': (context) => const RefreshIndicatorWidget(),
+
   // 示例导航
   '/plant-shop': (context) => const PlantShop(),
   '/timeline': (context) => const TimelinePage(),

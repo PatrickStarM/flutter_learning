@@ -113,4 +113,18 @@ final statefulList = <ContainerInfo>[
       'MaterialApp', 'Material应用', '/materialapp'),
   ContainerInfo(
       'WillPopScope', '返回拦截', '/willpopscope'),
+  ContainerInfo(
+      'Overlay', 'Overlay是⼀个Stack的widget，可以将overlay entry插⼊到overlay中，使独⽴的child窗⼝悬浮于其他widget之上。', '/overlay'),
+  ContainerInfo(
+      'Stepper', '可指定⼀步步的操作，可⾃定义步骤的内容，确认和返回的按钮以及步骤排列的⽅向。', '/stepper'),
+  ContainerInfo(
+      'CheckboxRadio', '复选框组件，常⽤于配置的切换，可指定颜⾊，接收状态变化回调，也可指定三态。', '/checkboxradio'),
+  ContainerInfo(
+      'Slider', '滑块组件，可以在指定的最⼤值和最⼩值之间拖动选择。可指定颜⾊、分段数及显示的标签，接收进度条变化回调。', '/slider'),
+  ContainerInfo(
+      'RangeSlider', '范围滑块组件，⽀持在两点之间滑动，获取之间的范围。可指定颜⾊、分段数及显示的标签，接收进度条变化回调', '/rangeslider'),
+  ContainerInfo(
+      'SnackBar', '信息提示条,从底部弹出的消息条，可指定形状、影深、背景⾊等。', '/snackbar'),
+  ContainerInfo(
+      'RefreshIndicator', '刷新指示器,内部嵌套可滑动区域，下拉时会显示刷新图标，松⼿后可以执⾏指定的异步⽅法。可指定颜⾊、到顶端的距离等属性。', '/refreshindicator'),
 ];
