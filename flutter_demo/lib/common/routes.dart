@@ -2,9 +2,21 @@ import 'package:flutter/material.dart';
 import 'package:flutter_demo/bottom/index.dart';
 import 'package:flutter_demo/sample/plant_shop.dart';
 import 'package:flutter_demo/sample/timeline_page.dart';
+import 'package:flutter_demo/widget/stateful/bottomsheet_widget.dart';
+import 'package:flutter_demo/widget/stateful/draggable_widget.dart';
+import 'package:flutter_demo/widget/stateful/expansion_widget.dart';
+import 'package:flutter_demo/widget/stateful/form_widget.dart';
 import 'package:flutter_demo/widget/stateful/image_widget.dart';
+import 'package:flutter_demo/widget/stateful/ink_widget.dart';
+import 'package:flutter_demo/widget/stateful/listwheelscrollview_widget.dart';
 import 'package:flutter_demo/widget/stateful/pageviewcontrol.dart';
+import 'package:flutter_demo/widget/stateful/progressindicator_widget.dart';
+import 'package:flutter_demo/widget/stateful/recorderablelistview_widget.dart';
+import 'package:flutter_demo/widget/stateful/scaffold_widget.dart';
+import 'package:flutter_demo/widget/stateful/selectabletext_widget.dart';
 import 'package:flutter_demo/widget/stateful/silverappbar_widget.dart';
+import 'package:flutter_demo/widget/stateful/texfield_widget.dart';
+import 'package:flutter_demo/widget/stateful/valuelistenablebuilder_widget.dart';
 import 'package:flutter_demo/widget/stateless/actionchip_widget.dart';
 import 'package:flutter_demo/widget/stateless/button_widget.dart';
 import 'package:flutter_demo/widget/stateless/card_widget.dart';
@@ -124,6 +136,18 @@ Map<String, Widget Function(BuildContext)> routes = {
   '/rangeslider': (context) => const RangeSliderWidget(),
   '/snackbar': (context) => const SnackBarWidget(),
   '/refreshindicator': (context) => const RefreshIndicatorWidget(),
+  '/draggable': (context) => const DraggableWidget(),
+  '/bottomsheet': (context) => const BottomSheetWidget(),
+  '/recorderablelistview': (context) => const ReorderableListViewWidget(),
+  '/listwheelscrollview': (context) => const ListWheelScrollViewWidget(),
+  '/form': (context) => const FormWidget(),
+  '/texfield': (context) => const TextFieldWidget(),
+  '/expansion': (context) => const ExpansionWidget(),
+  '/valuelistenablebuilder': (context) => const ValueListenableBuilderWidget(),
+  '/scaffold': (context) => const ScaffoldWidget(),
+  '/ink': (context) => const InkWidget(),
+  '/progressindicator': (context) => const ProgressIndicatorWidget(),
+  '/selectabletext': (context) => const SelectableTextWidget(),
 
   // 示例导航
   '/plant-shop': (context) => const PlantShop(),
