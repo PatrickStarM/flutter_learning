@@ -49,6 +49,13 @@ class _SamplePageState extends State<SamplePage> {
       Info(
         width: 400.0,
         height: 100.0,
+        color: Colors.pinkAccent.withAlpha(77),
+        title: '爱心角标',
+        url: '/heart'
+      ),
+      Info(
+        width: 400.0,
+        height: 100.0,
         color: Colors.green,
         title: '植物小店展示样例',
         url: '/plant-shop',

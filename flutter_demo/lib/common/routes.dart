@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_demo/bottom/index.dart';
+import 'package:flutter_demo/sample/heart.dart';
 import 'package:flutter_demo/sample/plant_shop.dart';
 import 'package:flutter_demo/sample/timeline_page.dart';
 import 'package:flutter_demo/widget/stateful/bottomsheet_widget.dart';
@@ -72,6 +73,9 @@ import 'package:flutter_demo/widget/stateful/rangeslider_widget.dart';
 import 'package:flutter_demo/widget/stateful/refreshindicator_widget.dart';
 import 'package:flutter_demo/widget/stateful/snackbar_widget.dart';
 import 'package:flutter_demo/widget/stateful/slide_widget.dart';
+import 'package:flutter_demo/widget/single/align_padding_widget.dart';
+import 'package:flutter_demo/widget/single/box_widget.dart';
+import 'package:flutter_demo/widget/single/clip_widget.dart';
 
 Map<String, Widget Function(BuildContext)> routes = {
   '/index': (context) => const Index(),
@@ -149,7 +153,13 @@ Map<String, Widget Function(BuildContext)> routes = {
   '/progressindicator': (context) => const ProgressIndicatorWidget(),
   '/selectabletext': (context) => const SelectableTextWidget(),
 
+  //单渲染组件导航
+  '/clip': (context) => const ClipWidget(),
+  '/box': (context) => const BoxWidget(),
+  '/alignpadding': (context) => const AlignPaddingWidget(),
+
   // 示例导航
   '/plant-shop': (context) => const PlantShop(),
   '/timeline': (context) => const TimelinePage(),
+  '/heart': (context) => const Heart()
 };

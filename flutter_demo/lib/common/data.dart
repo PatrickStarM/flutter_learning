@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_demo/widget/custom/my_widget_container.dart';
 import 'package:flutter_demo/widget/custom/widget_container.dart';
 
 final data = <dynamic>[
@@ -173,3 +174,19 @@ final statefulList = <ContainerInfo>[
   ContainerInfo('SelectableTextWidget',
       '可选择的⽂字，可以选择、复制。可指定浮标的颜⾊、⼤⼩、⽂字样式、对⻬⽅式等。', '/selectabletext'),
 ];
+// 单渲染组件列表
+final singleRenderList = <CustomContainer>[
+  CustomContainer('Clip', '椭圆裁剪、矩形裁剪、圆⻆矩形裁剪、路径裁剪', '/clip'),
+  CustomContainer(
+      'Box', '装饰盒、定尺⼨盒、适应盒、限制盒、约束盒、分率盒、⽐例盒、溢出盒、尺⼨溢出盒、旋转盒、颜⾊盒。', '/box'),
+  CustomContainer('AlignPadding', '对⻬组件和边距组件', '/alignpadding'),
+];
+// 多渲染组件列表
+final multiRenderList = <ContainerInfo>[];
+// 可折叠组件列表
+final sliverList = <ContainerInfo>[];
+// 可寄居组件列表
+final liveAwayList = <ContainerInfo>[];
+
+//其他未分类组件列表
+final otherList = <ContainerInfo>[];

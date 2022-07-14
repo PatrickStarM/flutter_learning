@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_demo/common/data.dart';
+import 'package:flutter_demo/widget/custom/widget_container.dart';
 
-import '../widget/custom/widget_container.dart';
 
 class StatefulWidgetPage extends StatelessWidget {
   const StatefulWidgetPage({Key? key}) : super(key: key);
