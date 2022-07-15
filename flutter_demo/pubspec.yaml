@@ -78,6 +78,7 @@ flutter:
    - images/java.webp
    - images/kotlin.webp
    - images/bg_patrick.jpg
+   - images/me-64.ico
 
   fonts:
    - family: iconfont

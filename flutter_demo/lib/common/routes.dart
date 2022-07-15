@@ -3,6 +3,8 @@ import 'package:flutter_demo/bottom/index.dart';
 import 'package:flutter_demo/sample/heart.dart';
 import 'package:flutter_demo/sample/plant_shop.dart';
 import 'package:flutter_demo/sample/timeline_page.dart';
+import 'package:flutter_demo/widget/single/ColorFiltered.dart';
+import 'package:flutter_demo/widget/single/custom_paint_widget.dart';
 import 'package:flutter_demo/widget/stateful/bottomsheet_widget.dart';
 import 'package:flutter_demo/widget/stateful/draggable_widget.dart';
 import 'package:flutter_demo/widget/stateful/expansion_widget.dart';
@@ -157,6 +159,8 @@ Map<String, Widget Function(BuildContext)> routes = {
   '/clip': (context) => const ClipWidget(),
   '/box': (context) => const BoxWidget(),
   '/alignpadding': (context) => const AlignPaddingWidget(),
+  '/custompaint': (context) => const CustomPaintWidget(),
+  '/colorfiltered': (context) => const ColorFilteredWidget(),
 
   // 示例导航
   '/plant-shop': (context) => const PlantShop(),

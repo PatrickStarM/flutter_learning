@@ -180,6 +180,8 @@ final singleRenderList = <CustomContainer>[
   CustomContainer(
       'Box', '装饰盒、定尺⼨盒、适应盒、限制盒、约束盒、分率盒、⽐例盒、溢出盒、尺⼨溢出盒、旋转盒、颜⾊盒。', '/box'),
   CustomContainer('AlignPadding', '对⻬组件和边距组件', '/alignpadding'),
+  CustomContainer('CustomPaint', '对⻬通过CustomPainter进⾏绘制，可实现⼀些复杂的⾃定义绘制组件，是Flutter中⾃定义组件的灵魂组件。', '/custompaint'),
+  CustomContainer('ColorFiltered', '对⻬可容纳⼀个⼦组件，并将组件按照29种叠⾊模式和任意组件混合，⾮常强⼤。', '/colorfiltered'),
 ];
 // 多渲染组件列表
 final multiRenderList = <ContainerInfo>[];
