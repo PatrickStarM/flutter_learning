@@ -1,40 +1,75 @@
+import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_demo/bottom/index.dart';
+import 'package:flutter_demo/common/routes.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
-import 'bottom/index.dart';
-import 'common/routes.dart';
-
 void main() {
-  WidgetsFlutterBinding.ensureInitialized();
   runApp(const MyApp());
-  //透明沉浸式状态栏
-  SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
-    statusBarColor: Colors.transparent,
-  ));
+  // runApp(
+  //   DevicePreview(
+  //     enabled: true,
+  //     builder: (context) => const MyApp(),
+  //   ),
+  // );
 }
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    // 设置android状态栏为透明的沉浸
+    SystemUiOverlayStyle systemUiOverlayStyle = const SystemUiOverlayStyle(
+      statusBarColor: Colors.transparent,
+      statusBarBrightness: Brightness.light,
+    );
+    SystemChrome.setSystemUIOverlayStyle(systemUiOverlayStyle);
     return MaterialApp(
+      useInheritedMediaQuery: true,
+      locale: DevicePreview.locale(context),
+      builder: DevicePreview.appBuilder,
       localizationsDelegates: const [
         GlobalMaterialLocalizations.delegate,
-        GlobalWidgetsLocalizations.delegate
+        GlobalWidgetsLocalizations.delegate,
       ],
       supportedLocales: const [
         Locale('zh', 'CH'),
         Locale('en', 'US'),
       ],
+      themeMode: ThemeMode.light,
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'Flutter学习',
       routes: routes,
       initialRoute: '/',
+      // theme: ThemeData.light(),
+      darkTheme: ThemeData.dark(),
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.indigo,
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ButtonStyle(
+            backgroundColor: MaterialStateProperty.resolveWith(
+                  (states) {
+                return const Color(0xff00a89b);
+              },
+            ),
+            foregroundColor: MaterialStateProperty.resolveWith(
+                  (states) {
+                return const Color(0xffffffff);
+              },
+            ),
+            shape: MaterialStateProperty.resolveWith<OutlinedBorder>(
+                  (states) {
+                return const RoundedRectangleBorder(
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(50),
+                  ),
+                );
+              },
+            ),
+          ),
+        ),
       ),
       home: const Index(),
     );
